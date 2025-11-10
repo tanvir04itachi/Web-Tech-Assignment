@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>University Admission Form - AIUB</title>
+    <meta name="author" content="Your Name">
+    <meta name="description" content="Online admission form for American International University Bangladesh (AIUB) to collect student details for enrollment.">
+    <meta name="keywords" content="admission form, AIUB, university, enrollment, web technologies">
+</head>
+<body>
+    <header>
+        <h1>American International University Bangladesh (AIUB)</h1>
+        <h2>Online Admission Form</h2>
+    </header>
+
+    <main>
+        <form action="#" method="post" enctype="multipart/form-data">
+            <fieldset>
+                <legend>Personal Information</legend>
+                
+                <label for="fullName">Full Name:</label><br>
+                <input type="text" id="fullName" name="fullName" maxlength="100" required><br><br>
+                
+                <label for="email">Email Address:</label><br>
+                <input type="email" id="email" name="email" required><br><br>
+                
+                <label for="phone">Phone Number:</label><br>
+                <input type="tel" id="phone" name="phone" maxlength="15" required><br><br>
+                
+                <label for="dob">Date of Birth:</label><br>
+                <input type="date" id="dob" name="dob" required><br><br>
+                
+                <label>Gender:</label><br>
+                <input type="radio" id="male" name="gender" value="Male" required>
+                <label for="male">Male</label><br>
+                <input type="radio" id="female" name="gender" value="Female">
+                <label for="female">Female</label><br>
+                <input type="radio" id="other" name="gender" value="Other">
+                <label for="other">Other</label><br><br>
+                
+                <label for="address">Address:</label><br>
+                <textarea id="address" name="address" rows="3" maxlength="200" required></textarea><br><br>
+            </fieldset>
+
+            <fieldset>
+                <legend>Academic Information</legend>
+                
+                <label for="schoolName">School Name (Last Attended):</label><br>
+                <input type="text" id="schoolName" name="schoolName" maxlength="100" required><br><br>
+                
+                <label for="graduationYear">Graduation Year:</label><br>
+                <input type="number" id="graduationYear" name="graduationYear" min="1900" max="2030" required><br><br>
+                
+                <label for="gpa">GPA (Last Exam):</label><br>
+                <input type="number" id="gpa" name="gpa" step="0.01" min="0" max="5" required><br><br>
+                
+                <label for="previousDegree">Previous Degree:</label><br>
+                <select id="previousDegree" name="previousDegree" required>
+                    <option value="">Select Degree</option>
+                    <option value="SSC">SSC</option>
+                    <option value="HSC">HSC</option>
+                    <option value="Diploma">Diploma</option>
+                    <option value="Other">Other</option>
+                </select><br><br>
+            </fieldset>
+
+            <fieldset>
+                <legend>Preferred Department and Interests</legend>
+                
+                <label for="preferredDepartment">Preferred Department:</label><br>
+                <select id="preferredDepartment" name="preferredDepartment" required>
+                    <option value="">Select Department</option>
+                    <option value="Computer Science">Computer Science</option>
+                    <option value="Electrical Engineering">Electrical Engineering</option>
+                    <option value="Business Administration">Business Administration</option>
+                    <option value="Civil Engineering">Civil Engineering</option>
+                    <option value="Other">Other</option>
+                </select><br><br>
+                
+                <label>Interests (Select all that apply):</label><br>
+                <input type="checkbox" id="programming" name="interests" value="Programming">
+                <label for="programming">Programming</label><br>
+                <input type="checkbox" id="design" name="interests" value="Design">
+                <label for="design">Design</label><br>
+                <input type="checkbox" id="research" name="interests" value="Research">
+                <label for="research">Research</label><br>
+                <input type="checkbox" id="sports" name="interests" value="Sports">
+                <label for="sports">Sports</label><br>
+                <input type="checkbox" id="otherInterest" name="interests" value="Other">
+                <label for="otherInterest">Other</label><br><br>
+            </fieldset>
+
+            <fieldset>
+                <legend>Necessary Documents</legend>
+                
+                <label for="transcript">Upload Transcript:</label><br>
+                <input type="file" id="transcript" name="transcript" accept=".pdf,.jpg,.png" required><br><br>
+                
+                <label for="certificate">Upload Certificate:</label><br>
+                <input type="file" id="certificate" name="certificate" accept=".pdf,.jpg,.png" required><br><br>
+                
+                <label for="photo">Upload Passport Size Photo:</label><br>
+                <input type="file" id="photo" name="photo" accept=".jpg,.png" required><br><br>
+            </fieldset>
+
+            <input type="submit" value="Submit Application">
+            <input type="reset" value="Reset Form">
+        </form>
+    </main>
+
+    <footer>
+        <p>THANK YOU FOR YOUR TIME</p>
+    </footer>
+</body>
+</html>
