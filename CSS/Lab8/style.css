@@ -1,0 +1,527 @@
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Header Styles */
+.header {
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    padding: 2rem 0;
+    text-align: center;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
+}
+
+.header h1 {
+    font-size: 2.5rem;
+    color: #2c3e50;
+    margin-bottom: 0.5rem;
+    font-weight: 700;
+}
+
+.header h1 i {
+    margin-right: 10px;
+    color: #3498db;
+}
+
+.tagline {
+    color: #7f8c8d;
+    font-size: 1.1rem;
+}
+
+/* Main Content */
+.main-content {
+    padding: 3rem 0;
+}
+
+/* Introduction Section */
+.intro-section {
+    background: white;
+    padding: 2.5rem;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    margin-bottom: 3rem;
+}
+
+.intro-section h2 {
+    color: #2c3e50;
+    margin-bottom: 1rem;
+    font-size: 2rem;
+}
+
+.intro-section p {
+    color: #5a6c7d;
+    margin-bottom: 2rem;
+    font-size: 1.1rem;
+    line-height: 1.7;
+}
+
+.intro-section code {
+    background: #f8f9fa;
+    padding: 2px 6px;
+    border-radius: 4px;
+    color: #e74c3c;
+    font-family: 'Courier New', monospace;
+}
+
+.properties-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+.property-card {
+    text-align: center;
+    padding: 1.5rem;
+    background: #f8f9fa;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+.property-card:hover {
+    transform: translateY(-5px);
+}
+
+.property-icon {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1rem;
+    font-size: 1.5rem;
+    color: white;
+}
+
+.property-icon.visible { background: #27ae60; }
+.property-icon.hidden { background: #e74c3c; }
+.property-icon.scroll { background: #3498db; }
+.property-icon.auto { background: #9b59b6; }
+
+.property-card h3 {
+    color: #2c3e50;
+    margin-bottom: 0.5rem;
+    font-size: 1.2rem;
+}
+
+.property-card p {
+    color: #7f8c8d;
+    font-size: 0.9rem;
+}
+
+/* Examples Section */
+.examples-section {
+    background: white;
+    padding: 2.5rem;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    margin-bottom: 3rem;
+}
+
+.examples-section h2 {
+    color: #2c3e50;
+    margin-bottom: 1rem;
+    font-size: 2rem;
+}
+
+.section-description {
+    color: #5a6c7d;
+    margin-bottom: 2rem;
+    font-size: 1.1rem;
+}
+
+.examples-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.example-card {
+    background: #f8f9fa;
+    border-radius: 12px;
+    padding: 1.5rem;
+    border: 2px solid #e9ecef;
+    transition: all 0.3s ease;
+}
+
+.example-card:hover {
+    border-color: #3498db;
+    box-shadow: 0 8px 25px rgba(52, 152, 219, 0.15);
+}
+
+.example-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.example-header h3 {
+    color: #2c3e50;
+    font-size: 1.3rem;
+}
+
+.property-badge {
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: white;
+}
+
+.property-badge.visible { background: #27ae60; }
+.property-badge.hidden { background: #e74c3c; }
+.property-badge.scroll { background: #3498db; }
+.property-badge.auto { background: #9b59b6; }
+
+.example-description {
+    margin-bottom: 1rem;
+}
+
+.example-description p {
+    color: #5a6c7d;
+    font-size: 0.95rem;
+}
+
+/* Overflow Box Styles - Fixed Size Container */
+.overflow-box {
+    width: 300px; /* Fixed width as required */
+    height: 200px; /* Fixed height as required */
+    border: 2px solid #bdc3c7;
+    border-radius: 8px;
+    padding: 15px;
+    background: white;
+    margin: 0 auto 1rem;
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.overflow-box.highlight {
+    border-color: #e74c3c;
+    box-shadow: 0 0 0 3px rgba(231, 76, 60, 0.3);
+}
+
+/* overflow: visible - Content renders outside container */
+.visible-box {
+    overflow: visible; /* Default behavior - content overflows visibly */
+    /* Effect: Content extends beyond container boundaries */
+    /* No scrollbars, content remains fully accessible but may overlap other elements */
+}
+
+/* overflow: hidden - Content clipped at container boundaries */
+.hidden-box {
+    overflow: hidden; /* Content is clipped and hidden */
+    /* Effect: Content outside container is inaccessible */
+    /* No scrollbars, excess content is completely hidden */
+}
+
+/* overflow: scroll - Scrollbars always visible */
+.scroll-box {
+    overflow: scroll; /* Scrollbars always shown */
+    /* Effect: Horizontal and vertical scrollbars always visible */
+    /* Scrollbars appear even if content fits perfectly */
+}
+
+/* overflow: auto - Scrollbars appear only when needed */
+.auto-box {
+    overflow: auto; /* Browser decides when to show scrollbars */
+    /* Effect: Scrollbars appear only when content overflows */
+    /* Most user-friendly and recommended option */
+}
+
+/* Box Content Styling */
+.box-content {
+    color: #2c3e50;
+}
+
+.box-content h4 {
+    color: #3498db;
+    margin-bottom: 10px;
+    font-size: 1.1rem;
+}
+
+.box-content p {
+    margin-bottom: 10px;
+    font-size: 0.9rem;
+    line-height: 1.5;
+}
+
+/* Code Example Styling */
+.code-example {
+    background: #2c3e50;
+    border-radius: 8px;
+    padding: 1rem;
+    margin-top: 1rem;
+}
+
+.code-example pre {
+    color: #ecf0f1;
+    font-family: 'Courier New', monospace;
+    font-size: 0.85rem;
+    line-height: 1.4;
+    margin: 0;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.code-example pre:hover {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+/* Advanced Section */
+.advanced-section {
+    background: white;
+    padding: 2.5rem;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    margin-bottom: 3rem;
+}
+
+.advanced-section h2 {
+    color: #2c3e50;
+    margin-bottom: 1rem;
+    font-size: 2rem;
+}
+
+.advanced-section p {
+    color: #5a6c7d;
+    margin-bottom: 2rem;
+    font-size: 1.1rem;
+}
+
+.advanced-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 2rem;
+}
+
+.advanced-card {
+    background: #f8f9fa;
+    border-radius: 12px;
+    padding: 1.5rem;
+    border: 2px solid #e9ecef;
+}
+
+.advanced-card h3 {
+    color: #2c3e50;
+    margin-bottom: 1rem;
+    font-size: 1.3rem;
+}
+
+.advanced-card p {
+    color: #5a6c7d;
+    margin-bottom: 1rem;
+    font-size: 0.95rem;
+}
+
+/* Overflow X Example */
+.x-scroll-box {
+    overflow-x: auto; /* Horizontal scroll when needed */
+    overflow-y: hidden; /* Vertical overflow hidden */
+    /* Effect: Horizontal scrolling enabled, vertical clipped */
+}
+
+.wide-content {
+    width: 600px; /* Intentionally wide content */
+}
+
+.wide-element {
+    background: #3498db;
+    color: white;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 4px;
+    white-space: nowrap;
+}
+
+.wide-element span {
+    margin: 0 20px;
+    font-weight: 600;
+}
+
+/* Text Overflow Example */
+.text-overflow-box {
+    width: 300px;
+    border: 2px solid #bdc3c7;
+    border-radius: 8px;
+    padding: 15px;
+    background: white;
+    margin: 1rem 0;
+}
+
+.truncated-text {
+    white-space: nowrap; /* Prevent text wrapping */
+    overflow: hidden; /* Hide overflow */
+    text-overflow: ellipsis; /* Show "..." at the end */
+    /* Effect: Single line text truncated with ellipsis */
+    color: #2c3e50;
+    font-size: 0.95rem;
+}
+
+/* Use Cases Section */
+.usecases-section {
+    background: white;
+    padding: 2.5rem;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.usecases-section h2 {
+    color: #2c3e50;
+    margin-bottom: 2rem;
+    font-size: 2rem;
+    text-align: center;
+}
+
+.usecases-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+}
+
+.usecase-card {
+    text-align: center;
+    padding: 2rem 1.5rem;
+    background: #f8f9fa;
+    border-radius: 12px;
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+}
+
+.usecase-card:hover {
+    border-color: #3498db;
+    transform: translateY(-5px);
+}
+
+.usecase-card i {
+    font-size: 2.5rem;
+    color: #3498db;
+    margin-bottom: 1rem;
+}
+
+.usecase-card h3 {
+    color: #2c3e50;
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+}
+
+.usecase-card p {
+    color: #5a6c7d;
+    font-size: 0.9rem;
+    line-height: 1.5;
+}
+
+/* Footer */
+.footer {
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    padding: 2rem 0;
+    text-align: center;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.footer p {
+    color: #7f8c8d;
+    margin-bottom: 0.5rem;
+}
+
+.footer p:last-child {
+    margin-bottom: 0;
+    font-size: 0.9rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .header h1 {
+        font-size: 2rem;
+    }
+    
+    .examples-grid,
+    .advanced-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .properties-grid,
+    .usecases-grid {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    }
+    
+    .overflow-box {
+        width: 100%;
+        max-width: 300px;
+    }
+    
+    .wide-content {
+        width: 400px;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 0 15px;
+    }
+    
+    .intro-section,
+    .examples-section,
+    .advanced-section,
+    .usecases-section {
+        padding: 1.5rem;
+    }
+    
+    .header h1 {
+        font-size: 1.8rem;
+    }
+    
+    .example-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.5rem;
+    }
+    
+    .properties-grid,
+    .usecases-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Animation for elements */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.example-card,
+.advanced-card,
+.usecase-card {
+    animation: fadeInUp 0.6s ease forwards;
+}
+
+.example-card:nth-child(1) { animation-delay: 0.1s; }
+.example-card:nth-child(2) { animation-delay: 0.2s; }
+.example-card:nth-child(3) { animation-delay: 0.3s; }
+.example-card:nth-child(4) { animation-delay: 0.4s; }

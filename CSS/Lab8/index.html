@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Your Name">
+    <meta name="description" content="CSS Overflow Properties Demonstration">
+    <title>CSS Overflow Properties | Web Technologies Lab</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header Section -->
+    <header class="header">
+        <div class="container">
+            <h1><i class="fas fa-scroll"></i> CSS Overflow Properties</h1>
+            <p class="tagline">Understanding how content behaves when it exceeds container boundaries</p>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <div class="container">
+            <!-- Introduction Section -->
+            <section class="intro-section">
+                <h2>What is CSS Overflow?</h2>
+                <p>
+                    The CSS <code>overflow</code> property controls what happens to content that is too big to fit in an element's box. 
+                    It's essential for creating clean, user-friendly layouts when dealing with dynamic content.
+                </p>
+                <div class="properties-grid">
+                    <div class="property-card">
+                        <div class="property-icon visible">
+                            <i class="fas fa-eye"></i>
+                        </div>
+                        <h3>visible</h3>
+                        <p>Content renders outside the element's box (default)</p>
+                    </div>
+                    <div class="property-card">
+                        <div class="property-icon hidden">
+                            <i class="fas fa-eye-slash"></i>
+                        </div>
+                        <h3>hidden</h3>
+                        <p>Content is clipped and hidden from view</p>
+                    </div>
+                    <div class="property-card">
+                        <div class="property-icon scroll">
+                            <i class="fas fa-scroll"></i>
+                        </div>
+                        <h3>scroll</h3>
+                        <p>Scrollbars are always visible for navigation</p>
+                    </div>
+                    <div class="property-card">
+                        <div class="property-icon auto">
+                            <i class="fas fa-magic"></i>
+                        </div>
+                        <h3>auto</h3>
+                        <p>Browser decides when to show scrollbars</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Overflow Examples Section -->
+            <section class="examples-section">
+                <h2>Overflow Property Examples</h2>
+                <p class="section-description">
+                    All examples below use a fixed container size of <strong>300px × 200px</strong> with the same content.
+                </p>
+
+                <div class="examples-grid">
+                    <!-- Overflow: Visible -->
+                    <div class="example-card">
+                        <div class="example-header">
+                            <h3>overflow: visible</h3>
+                            <span class="property-badge visible">Default Behavior</span>
+                        </div>
+                        <div class="example-description">
+                            <p>Content extends beyond the container boundaries and remains fully visible.</p>
+                        </div>
+                        <div class="overflow-box visible-box">
+                            <div class="box-content">
+                                <h4>Understanding Web Technologies</h4>
+                                <p>Web technologies encompass all tools and languages used to create and manage websites and web applications. This includes HTML for structure, CSS for styling, and JavaScript for interactivity.</p>
+                                <p>Modern web development also involves frameworks like React, Angular, and Vue.js, which help developers build complex applications more efficiently. These technologies continue to evolve rapidly.</p>
+                                <p>Responsive design principles ensure that websites work well on various devices, from desktop computers to mobile phones. This is achieved through flexible layouts, media queries, and scalable images.</p>
+                                <p>Web accessibility is another crucial aspect, making sure that websites can be used by people with disabilities. This involves proper semantic HTML, keyboard navigation, and screen reader compatibility.</p>
+                            </div>
+                        </div>
+                        <div class="code-example">
+                            <pre><code>.visible-box {
+    overflow: visible;
+    /* Content renders outside container */
+    /* No scrollbars, content overflows */
+}</code></pre>
+                        </div>
+                    </div>
+
+                    <!-- Overflow: Hidden -->
+                    <div class="example-card">
+                        <div class="example-header">
+                            <h3>overflow: hidden</h3>
+                            <span class="property-badge hidden">Content Clipped</span>
+                        </div>
+                        <div class="example-description">
+                            <p>Content is clipped at the container boundaries and inaccessible.</p>
+                        </div>
+                        <div class="overflow-box hidden-box">
+                            <div class="box-content">
+                                <h4>Understanding Web Technologies</h4>
+                                <p>Web technologies encompass all tools and languages used to create and manage websites and web applications. This includes HTML for structure, CSS for styling, and JavaScript for interactivity.</p>
+                                <p>Modern web development also involves frameworks like React, Angular, and Vue.js, which help developers build complex applications more efficiently. These technologies continue to evolve rapidly.</p>
+                                <p>Responsive design principles ensure that websites work well on various devices, from desktop computers to mobile phones. This is achieved through flexible layouts, media queries, and scalable images.</p>
+                                <p>Web accessibility is another crucial aspect, making sure that websites can be used by people with disabilities. This involves proper semantic HTML, keyboard navigation, and screen reader compatibility.</p>
+                            </div>
+                        </div>
+                        <div class="code-example">
+                            <pre><code>.hidden-box {
+    overflow: hidden;
+    /* Content clipped at container edges */
+    /* No scrollbars, hidden content */
+}</code></pre>
+                        </div>
+                    </div>
+
+                    <!-- Overflow: Scroll -->
+                    <div class="example-card">
+                        <div class="example-header">
+                            <h3>overflow: scroll</h3>
+                            <span class="property-badge scroll">Always Scrollable</span>
+                        </div>
+                        <div class="example-description">
+                            <p>Scrollbars are always visible, even if content fits perfectly.</p>
+                        </div>
+                        <div class="overflow-box scroll-box">
+                            <div class="box-content">
+                                <h4>Understanding Web Technologies</h4>
+                                <p>Web technologies encompass all tools and languages used to create and manage websites and web applications. This includes HTML for structure, CSS for styling, and JavaScript for interactivity.</p>
+                                <p>Modern web development also involves frameworks like React, Angular, and Vue.js, which help developers build complex applications more efficiently. These technologies continue to evolve rapidly.</p>
+                                <p>Responsive design principles ensure that websites work well on various devices, from desktop computers to mobile phones. This is achieved through flexible layouts, media queries, and scalable images.</p>
+                                <p>Web accessibility is another crucial aspect, making sure that websites can be used by people with disabilities. This involves proper semantic HTML, keyboard navigation, and screen reader compatibility.</p>
+                            </div>
+                        </div>
+                        <div class="code-example">
+                            <pre><code>.scroll-box {
+    overflow: scroll;
+    /* Scrollbars always visible */
+    /* Horizontal & vertical scrolling */
+}</code></pre>
+                        </div>
+                    </div>
+
+                    <!-- Overflow: Auto -->
+                    <div class="example-card">
+                        <div class="example-header">
+                            <h3>overflow: auto</h3>
+                            <span class="property-badge auto">Smart Scrollbars</span>
+                        </div>
+                        <div class="example-description">
+                            <p>Scrollbars appear only when content overflows (recommended).</p>
+                        </div>
+                        <div class="overflow-box auto-box">
+                            <div class="box-content">
+                                <h4>Understanding Web Technologies</h4>
+                                <p>Web technologies encompass all tools and languages used to create and manage websites and web applications. This includes HTML for structure, CSS for styling, and JavaScript for interactivity.</p>
+                                <p>Modern web development also involves frameworks like React, Angular, and Vue.js, which help developers build complex applications more efficiently. These technologies continue to evolve rapidly.</p>
+                                <p>Responsive design principles ensure that websites work well on various devices, from desktop computers to mobile phones. This is achieved through flexible layouts, media queries, and scalable images.</p>
+                                <p>Web accessibility is another crucial aspect, making sure that websites can be used by people with disabilities. This involves proper semantic HTML, keyboard navigation, and screen reader compatibility.</p>
+                            </div>
+                        </div>
+                        <div class="code-example">
+                            <pre><code>.auto-box {
+    overflow: auto;
+    /* Scrollbars appear only when needed */
+    /* Most user-friendly option */
+}</code></pre>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Additional Examples Section -->
+            <section class="advanced-section">
+                <h2>Advanced Overflow Properties</h2>
+                <p>CSS also provides specific properties for horizontal and vertical overflow control.</p>
+
+                <div class="advanced-grid">
+                    <!-- Overflow-X Example -->
+                    <div class="advanced-card">
+                        <h3>overflow-x & overflow-y</h3>
+                        <p>Control horizontal and vertical overflow independently.</p>
+                        <div class="overflow-box x-scroll-box">
+                            <div class="box-content wide-content">
+                                <h4>Horizontal Scrolling Example</h4>
+                                <p>This content is intentionally very wide to demonstrate horizontal scrolling behavior when overflow-x is set to auto or scroll. You can see how the horizontal scrollbar appears when the content exceeds the container's width.</p>
+                                <div class="wide-element">
+                                    <span>← Very Wide Content →</span>
+                                    <span>← That Requires Horizontal Scrolling →</span>
+                                    <span>← To View Completely →</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="code-example">
+                            <pre><code>.x-scroll-box {
+    overflow-x: auto;
+    overflow-y: hidden;
+    /* Horizontal scroll when needed */
+    /* Vertical overflow hidden */
+}</code></pre>
+                        </div>
+                    </div>
+
+                    <!-- Text Overflow Example -->
+                    <div class="advanced-card">
+                        <h3>text-overflow: ellipsis</h3>
+                        <p>Handle single-line text overflow with ellipsis.</p>
+                        <div class="text-overflow-box">
+                            <div class="truncated-text">
+                                This is a very long text that will be truncated with an ellipsis at the end when it doesn't fit in the container width.
+                            </div>
+                        </div>
+                        <div class="code-example">
+                            <pre><code>.truncated-text {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    /* Single line text truncation */
+    /* Shows "..." at the end */
+}</code></pre>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Use Cases Section -->
+            <section class="usecases-section">
+                <h2>Practical Use Cases</h2>
+                <div class="usecases-grid">
+                    <div class="usecase-card">
+                        <i class="fas fa-comments"></i>
+                        <h3>Chat Applications</h3>
+                        <p>Use <code>overflow-y: auto</code> for message containers to scroll through conversation history.</p>
+                    </div>
+                    <div class="usecase-card">
+                        <i class="fas fa-table"></i>
+                        <h3>Data Tables</h3>
+                        <p>Apply <code>overflow-x: auto</code> to tables for horizontal scrolling on mobile devices.</p>
+                    </div>
+                    <div class="usecase-card">
+                        <i class="fas fa-image"></i>
+                        <h3>Image Galleries</h3>
+                        <p>Use <code>overflow: hidden</code> for image containers with fixed aspect ratios.</p>
+                    </div>
+                    <div class="usecase-card">
+                        <i class="fas fa-code"></i>
+                        <h3>Code Editors</h3>
+                        <p>Implement <code>overflow: auto</code> for code blocks with line numbers and syntax highlighting.</p>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 Web Technologies Lab | AIUB Faculty of Science and Technology</p>
+            <p>Department of Computer Science | CSS Overflow Properties Demonstration</p>
+        </div>
+    </footer>
+
+    <script>
+        // Add interactive functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            // Add click effects to overflow boxes
+            const overflowBoxes = document.querySelectorAll('.overflow-box');
+            
+            overflowBoxes.forEach(box => {
+                box.addEventListener('click', function() {
+                    this.classList.toggle('highlight');
+                    setTimeout(() => {
+                        this.classList.remove('highlight');
+                    }, 1000);
+                });
+            });
+
+            // Add copy code functionality
+            const codeExamples = document.querySelectorAll('.code-example pre');
+            
+            codeExamples.forEach(codeBlock => {
+                codeBlock.addEventListener('click', function() {
+                    const code = this.textContent;
+                    navigator.clipboard.writeText(code).then(() => {
+                        const originalText = this.textContent;
+                        this.textContent = 'Code copied!';
+                        setTimeout(() => {
+                            this.textContent = originalText;
+                        }, 1500);
+                    });
+                });
+            });
+        });
+    </script>
+</body>
+</html>

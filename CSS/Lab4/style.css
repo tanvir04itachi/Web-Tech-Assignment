@@ -1,0 +1,335 @@
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f8f9fa;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Header Styles */
+.header {
+    background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
+    color: white;
+    padding: 2rem 0;
+    text-align: center;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+    font-weight: 700;
+}
+
+.tagline {
+    font-size: 1.1rem;
+    opacity: 0.9;
+    font-style: italic;
+}
+
+/* Main Content */
+.main-content {
+    padding: 3rem 0;
+}
+
+/* Products Section */
+.products-section {
+    margin-bottom: 4rem;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 2.2rem;
+    color: #2c3e50;
+    margin-bottom: 1rem;
+    font-weight: 700;
+}
+
+.section-subtitle {
+    text-align: center;
+    color: #7f8c8d;
+    margin-bottom: 3rem;
+    font-size: 1.1rem;
+}
+
+/* Products Container */
+.products-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+    margin: 0 -1rem;
+}
+
+/* Product Box Styles */
+.product-box {
+    display: inline-block;
+    width: calc(33.333% - 2rem);
+    min-width: 300px;
+    background: white;
+    border: 2px solid #e9ecef;
+    border-radius: 12px;
+    padding: 1.5rem;
+    margin: 1rem;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+    transition: all 0.3s ease;
+    vertical-align: top;
+    position: relative;
+    overflow: hidden;
+}
+
+.product-box::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 4px;
+    background: linear-gradient(90deg, #3498db, #2ecc71, #e74c3c);
+    transition: left 0.5s ease;
+}
+
+.product-box:hover::before {
+    left: 0;
+}
+
+.product-box:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+    outline: 3px solid #3498db;
+    outline-offset: 3px;
+    border-color: #3498db;
+}
+
+/* Product Image */
+.product-image {
+    margin-bottom: 1.5rem;
+}
+
+.product-image img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+}
+
+.product-box:hover .product-image img {
+    transform: scale(1.05);
+}
+
+/* Product Content */
+.product-content {
+    padding: 0 0.5rem;
+}
+
+.product-name {
+    font-size: 1.4rem;
+    color: #2c3e50;
+    margin-bottom: 1rem;
+    font-weight: 600;
+}
+
+.product-description {
+    color: #7f8c8d;
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+    font-size: 0.95rem;
+}
+
+/* Product Features */
+.product-features {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.feature {
+    background: #ecf0f1;
+    color: #2c3e50;
+    padding: 0.4rem 0.8rem;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 500;
+}
+
+/* Product Price */
+.product-price {
+    margin-bottom: 1.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+.original-price {
+    color: #95a5a6;
+    text-decoration: line-through;
+    font-size: 1.1rem;
+}
+
+.current-price {
+    color: #e74c3c;
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+/* Buy Button */
+.buy-btn {
+    display: inline-block;
+    background: linear-gradient(135deg, #3498db, #2980b9);
+    color: white;
+    text-decoration: none;
+    padding: 0.8rem 2rem;
+    border-radius: 25px;
+    font-weight: 600;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 4px 15px rgba(52, 152, 219, 0.3);
+}
+
+.buy-btn:hover {
+    background: linear-gradient(135deg, #2980b9, #3498db);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(52, 152, 219, 0.4);
+}
+
+/* Special Offers Badge */
+.product-box:nth-child(2)::after {
+    content: 'BEST SELLER';
+    position: absolute;
+    top: 15px;
+    right: -30px;
+    background: #e74c3c;
+    color: white;
+    padding: 0.3rem 2rem;
+    font-size: 0.8rem;
+    font-weight: 600;
+    transform: rotate(45deg);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+}
+
+.product-box:nth-child(5)::after {
+    content: 'NEW';
+    position: absolute;
+    top: 15px;
+    right: -30px;
+    background: #2ecc71;
+    color: white;
+    padding: 0.3rem 2rem;
+    font-size: 0.8rem;
+    font-weight: 600;
+    transform: rotate(45deg);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+}
+
+/* Footer */
+.footer {
+    background: #2c3e50;
+    color: white;
+    text-align: center;
+    padding: 2rem 0;
+    margin-top: 2rem;
+}
+
+.footer p {
+    margin-bottom: 0.5rem;
+}
+
+.footer p:last-child {
+    margin-bottom: 0;
+    opacity: 0.8;
+    font-size: 0.9rem;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .product-box {
+        width: calc(50% - 2rem);
+    }
+}
+
+@media (max-width: 768px) {
+    .products-container {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .product-box {
+        width: 100%;
+        max-width: 400px;
+        margin: 1rem 0;
+    }
+    
+    .header h1 {
+        font-size: 2rem;
+    }
+    
+    .section-title {
+        font-size: 1.8rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 0 15px;
+    }
+    
+    .product-box {
+        padding: 1rem;
+        margin: 0.5rem 0;
+    }
+    
+    .product-name {
+        font-size: 1.2rem;
+    }
+    
+    .current-price {
+        font-size: 1.3rem;
+    }
+    
+    .buy-btn {
+        padding: 0.7rem 1.5rem;
+        font-size: 0.9rem;
+    }
+}
+
+/* Animation for product boxes */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.product-box {
+    animation: fadeInUp 0.6s ease forwards;
+}
+
+.product-box:nth-child(1) { animation-delay: 0.1s; }
+.product-box:nth-child(2) { animation-delay: 0.2s; }
+.product-box:nth-child(3) { animation-delay: 0.3s; }
+.product-box:nth-child(4) { animation-delay: 0.4s; }
+.product-box:nth-child(5) { animation-delay: 0.5s; }
+.product-box:nth-child(6) { animation-delay: 0.6s; }

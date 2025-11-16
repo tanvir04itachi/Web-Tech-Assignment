@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Your Name">
+    <meta name="description" content="CSS Z-index Property Demonstration - Understanding Element Stacking">
+    <title>Z-index Playground | CSS Layering Demo</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header Section -->
+    <header class="header">
+        <div class="container">
+            <h1><i class="fas fa-layer-group"></i> CSS Z-index Playground</h1>
+            <p class="tagline">Visualize and experiment with element stacking order</p>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <div class="container">
+            <!-- Introduction Section -->
+            <section class="intro-section">
+                <h2>Understanding Z-index</h2>
+                <div class="theory-content">
+                    <div class="theory-text">
+                        <p>
+                            The <code>z-index</code> property controls the vertical stacking order of elements that overlap. 
+                            It only works on positioned elements (<code>position: absolute</code>, <code>relative</code>, <code>fixed</code>, or <code>sticky</code>).
+                        </p>
+                        <div class="key-points">
+                            <div class="point">
+                                <i class="fas fa-arrow-up"></i>
+                                <strong>Higher z-index</strong> values appear on top
+                            </div>
+                            <div class="point">
+                                <i class="fas fa-arrow-down"></i>
+                                <strong>Lower z-index</strong> values appear behind
+                            </div>
+                            <div class="point">
+                                <i class="fas fa-infinity"></i>
+                                Can use positive, negative, or zero values
+                            </div>
+                        </div>
+                    </div>
+                    <div class="theory-visual">
+                        <div class="stacking-example">
+                            <div class="stack-layer" style="--layer: 1; --color: #e74c3c;">
+                                <span>z-index: 1</span>
+                            </div>
+                            <div class="stack-layer" style="--layer: 2; --color: #3498db;">
+                                <span>z-index: 2</span>
+                            </div>
+                            <div class="stack-layer" style="--layer: 3; --color: #2ecc71;">
+                                <span>z-index: 3</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Interactive Demo Section -->
+            <section class="demo-section">
+                <h2>Interactive Z-index Demo</h2>
+                <p class="section-description">
+                    Drag the sliders to change z-index values and see how the stacking order changes in real-time.
+                </p>
+
+                <div class="demo-container">
+                    <!-- Controls Panel -->
+                    <div class="controls-panel">
+                        <h3><i class="fas fa-sliders-h"></i> Stacking Controls</h3>
+                        
+                        <div class="control-group">
+                            <label for="red-z" class="control-label red-label">
+                                <i class="fas fa-square" style="color: #e74c3c;"></i>
+                                Red Box (Box 1)
+                            </label>
+                            <div class="slider-container">
+                                <input type="range" id="red-z" class="z-slider" min="1" max="3" value="1" data-box="red">
+                                <span class="slider-value" id="red-value">1</span>
+                            </div>
+                        </div>
+
+                        <div class="control-group">
+                            <label for="blue-z" class="control-label blue-label">
+                                <i class="fas fa-square" style="color: #3498db;"></i>
+                                Blue Box (Box 2)
+                            </label>
+                            <div class="slider-container">
+                                <input type="range" id="blue-z" class="z-slider" min="1" max="3" value="2" data-box="blue">
+                                <span class="slider-value" id="blue-value">2</span>
+                            </div>
+                        </div>
+
+                        <div class="control-group">
+                            <label for="green-z" class="control-label green-label">
+                                <i class="fas fa-square" style="color: #2ecc71;"></i>
+                                Green Box (Box 3)
+                            </label>
+                            <div class="slider-container">
+                                <input type="range" id="green-z" class="z-slider" min="1" max="3" value="3" data-box="green">
+                                <span class="slider-value" id="green-value">3</span>
+                            </div>
+                        </div>
+
+                        <div class="control-actions">
+                            <button id="reset-btn" class="action-btn">
+                                <i class="fas fa-redo"></i> Reset to Default
+                            </button>
+                            <button id="random-btn" class="action-btn secondary">
+                                <i class="fas fa-random"></i> Randomize
+                            </button>
+                        </div>
+
+                        <div class="stacking-info">
+                            <h4>Current Stacking Order</h4>
+                            <div id="stacking-order" class="order-display">
+                                <div class="order-item" data-box="green">1. Green Box (z-index: 3)</div>
+                                <div class="order-item" data-box="blue">2. Blue Box (z-index: 2)</div>
+                                <div class="order-item" data-box="red">3. Red Box (z-index: 1)</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Visualization Area -->
+                    <div class="visualization-area">
+                        <div class="stage">
+                            <div class="grid-overlay"></div>
+                            
+                            <!-- Overlapping Boxes -->
+                            <div class="box red-box" id="red-box" data-z="1">
+                                <div class="box-header">
+                                    <i class="fas fa-square" style="color: #e74c3c;"></i>
+                                    <span>Box 1</span>
+                                </div>
+                                <div class="box-content">
+                                    <div class="z-display">z-index: <span class="z-value">1</span></div>
+                                    <div class="coordinates">
+                                        top: 50px<br>
+                                        left: 50px
+                                    </div>
+                                </div>
+                                <div class="box-handle"></div>
+                            </div>
+
+                            <div class="box blue-box" id="blue-box" data-z="2">
+                                <div class="box-header">
+                                    <i class="fas fa-square" style="color: #3498db;"></i>
+                                    <span>Box 2</span>
+                                </div>
+                                <div class="box-content">
+                                    <div class="z-display">z-index: <span class="z-value">2</span></div>
+                                    <div class="coordinates">
+                                        top: 100px<br>
+                                        left: 100px
+                                    </div>
+                                </div>
+                                <div class="box-handle"></div>
+                            </div>
+
+                            <div class="box green-box" id="green-box" data-z="3">
+                                <div class="box-header">
+                                    <i class="fas fa-square" style="color: #2ecc71;"></i>
+                                    <span>Box 3</span>
+                                </div>
+                                <div class="box-content">
+                                    <div class="z-display">z-index: <span class="z-value">3</span></div>
+                                    <div class="coordinates">
+                                        top: 150px<br>
+                                        left: 150px
+                                    </div>
+                                </div>
+                                <div class="box-handle"></div>
+                            </div>
+                        </div>
+
+                        <div class="visualization-info">
+                            <div class="info-item">
+                                <i class="fas fa-info-circle"></i>
+                                <span>Drag the colored handles to move boxes</span>
+                            </div>
+                            <div class="info-item">
+                                <i class="fas fa-mouse-pointer"></i>
+                                <span>Click on boxes to bring them to front temporarily</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Advanced Examples Section -->
+            <section class="advanced-section">
+                <h2>Advanced Z-index Scenarios</h2>
+                <div class="scenarios-grid">
+                    <div class="scenario-card">
+                        <h3><i class="fas fa-sitemap"></i> Stacking Context</h3>
+                        <p>Elements with z-index create stacking contexts. Child elements are stacked relative to their parent.</p>
+                        <div class="scenario-demo">
+                            <div class="parent-context" style="z-index: 1;">
+                                <div class="context-label">Parent (z-index: 1)</div>
+                                <div class="child-box" style="z-index: 100;">Child (z-index: 100)</div>
+                            </div>
+                            <div class="sibling-box" style="z-index: 2;">Sibling (z-index: 2)</div>
+                        </div>
+                        <div class="scenario-explanation">
+                            The child with z-index: 100 still appears behind the sibling with z-index: 2 because it's constrained by parent's stacking context.
+                        </div>
+                    </div>
+
+                    <div class="scenario-card">
+                        <h3><i class="fas fa-minus-circle"></i> Negative Z-index</h3>
+                        <p>Negative z-index values place elements behind their parent and default content.</p>
+                        <div class="scenario-demo negative-demo">
+                            <div class="normal-box">Normal Content</div>
+                            <div class="negative-box" style="z-index: -1;">Behind (z-index: -1)</div>
+                        </div>
+                        <div class="scenario-explanation">
+                            Elements with negative z-index appear behind their parent element and regular document flow content.
+                        </div>
+                    </div>
+
+                    <div class="scenario-card">
+                        <h3><i class="fas fa-code"></i> Auto Z-index</h3>
+                        <p>When z-index is auto (default), elements stack based on their order in HTML and positioning.</p>
+                        <div class="scenario-demo auto-demo">
+                            <div class="auto-box positioned">Positioned Later</div>
+                            <div class="auto-box">Positioned First</div>
+                        </div>
+                        <div class="scenario-explanation">
+                            Later elements in HTML appear on top when both have the same z-index (auto) and are positioned.
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Practical Applications -->
+            <section class="applications-section">
+                <h2>Practical Applications</h2>
+                <div class="applications-grid">
+                    <div class="application-card">
+                        <div class="app-icon modal">
+                            <i class="fas fa-window-restore"></i>
+                        </div>
+                        <h3>Modal Dialogs</h3>
+                        <p>Use high z-index values to ensure modals appear above all other page content.</p>
+                        <code>z-index: 1000;</code>
+                    </div>
+                    <div class="application-card">
+                        <div class="app-icon dropdown">
+                            <i class="fas fa-caret-square-down"></i>
+                        </div>
+                        <h3>Dropdown Menus</h3>
+                        <p>Dropdowns need to appear above other elements when activated.</p>
+                        <code>z-index: 100;</code>
+                    </div>
+                    <div class="application-card">
+                        <div class="app-icon tooltip">
+                            <i class="fas fa-comment-alt"></i>
+                        </div>
+                        <h3>Tooltips</h3>
+                        <p>Tooltips should float above all other interactive elements.</p>
+                        <code>z-index: 9999;</code>
+                    </div>
+                    <div class="application-card">
+                        <div class="app-icon header">
+                            <i class="fas fa-bars"></i>
+                        </div>
+                        <h3>Sticky Headers</h3>
+                        <p>Headers that stick to top need to appear above scrolling content.</p>
+                        <code>z-index: 100;</code>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 Web Technologies Lab | AIUB Faculty of Science and Technology</p>
+            <p>Department of Computer Science | CSS Z-index Property Demonstration</p>
+        </div>
+    </footer>
+
+    <script>
+        // Z-index controls functionality
+        const sliders = document.querySelectorAll('.z-slider');
+        const boxes = {
+            red: document.getElementById('red-box'),
+            blue: document.getElementById('blue-box'),
+            green: document.getElementById('green-box')
+        };
+        const values = {
+            red: document.getElementById('red-value'),
+            blue: document.getElementById('blue-value'),
+            green: document.getElementById('green-value')
+        };
+        const zValues = {
+            red: document.querySelector('#red-box .z-value'),
+            blue: document.querySelector('#blue-box .z-value'),
+            green: document.querySelector('#green-box .z-value')
+        };
+
+        // Update z-index when sliders change
+        sliders.forEach(slider => {
+            slider.addEventListener('input', function() {
+                const boxType = this.dataset.box;
+                const value = this.value;
+                
+                // Update display values
+                values[boxType].textContent = value;
+                zValues[boxType].textContent = value;
+                
+                // Update actual z-index
+                boxes[boxType].style.zIndex = value;
+                boxes[boxType].dataset.z = value;
+                
+                // Update stacking order display
+                updateStackingOrder();
+            });
+        });
+
+        // Reset to default values
+        document.getElementById('reset-btn').addEventListener('click', function() {
+            document.getElementById('red-z').value = 1;
+            document.getElementById('blue-z').value = 2;
+            document.getElementById('green-z').value = 3;
+            
+            // Trigger input events to update everything
+            document.getElementById('red-z').dispatchEvent(new Event('input'));
+            document.getElementById('blue-z').dispatchEvent(new Event('input'));
+            document.getElementById('green-z').dispatchEvent(new Event('input'));
+        });
+
+        // Randomize z-index values
+        document.getElementById('random-btn').addEventListener('click', function() {
+            const values = [1, 2, 3];
+            shuffleArray(values);
+            
+            document.getElementById('red-z').value = values[0];
+            document.getElementById('blue-z').value = values[1];
+            document.getElementById('green-z').value = values[2];
+            
+            // Trigger input events
+            document.getElementById('red-z').dispatchEvent(new Event('input'));
+            document.getElementById('blue-z').dispatchEvent(new Event('input'));
+            document.getElementById('green-z').dispatchEvent(new Event('input'));
+        });
+
+        // Helper function to shuffle array
+        function shuffleArray(array) {
+            for (let i = array.length - 1; i > 0; i--) {
+                const j = Math.floor(Math.random() * (i + 1));
+                [array[i], array[j]] = [array[j], array[i]];
+            }
+            return array;
+        }
+
+        // Update stacking order display
+        function updateStackingOrder() {
+            const orderDisplay = document.getElementById('stacking-order');
+            const boxes = [
+                { type: 'red', z: parseInt(document.getElementById('red-z').value) },
+                { type: 'blue', z: parseInt(document.getElementById('blue-z').value) },
+                { type: 'green', z: parseInt(document.getElementById('green-z').value) }
+            ];
+            
+            // Sort by z-index (highest first)
+            boxes.sort((a, b) => b.z - a.z);
+            
+            // Update display
+            orderDisplay.innerHTML = '';
+            boxes.forEach((box, index) => {
+                const orderItem = document.createElement('div');
+                orderItem.className = 'order-item';
+                orderItem.dataset.box = box.type;
+                orderItem.textContent = `${index + 1}. ${box.type.charAt(0).toUpperCase() + box.type.slice(1)} Box (z-index: ${box.z})`;
+                orderDisplay.appendChild(orderItem);
+            });
+        }
+
+        // Make boxes draggable
+        boxes.red.querySelector('.box-handle').addEventListener('mousedown', initDrag);
+        boxes.blue.querySelector('.box-handle').addEventListener('mousedown', initDrag);
+        boxes.green.querySelector('.box-handle').addEventListener('mousedown', initDrag);
+
+        function initDrag(e) {
+            const box = this.parentElement;
+            let pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
+            
+            e = e || window.event;
+            e.preventDefault();
+            
+            // Get the mouse cursor position at startup
+            pos3 = e.clientX;
+            pos4 = e.clientY;
+            
+            // Bring box to front while dragging
+            box.style.zIndex = '1000';
+            
+            document.onmouseup = closeDragElement;
+            document.onmousemove = elementDrag;
+
+            function elementDrag(e) {
+                e = e || window.event;
+                e.preventDefault();
+                
+                // Calculate the new cursor position
+                pos1 = pos3 - e.clientX;
+                pos2 = pos4 - e.clientY;
+                pos3 = e.clientX;
+                pos4 = e.clientY;
+                
+                // Set the element's new position
+                box.style.top = (box.offsetTop - pos2) + "px";
+                box.style.left = (box.offsetLeft - pos1) + "px";
+                
+                // Update coordinates display
+                const coordinates = box.querySelector('.coordinates');
+                coordinates.innerHTML = `top: ${box.offsetTop}px<br>left: ${box.offsetLeft}px`;
+            }
+
+            function closeDragElement() {
+                // Stop moving when mouse button is released
+                document.onmouseup = null;
+                document.onmousemove = null;
+                
+                // Restore original z-index
+                const slider = document.querySelector(`#${box.id.replace('-box', '-z')}`);
+                box.style.zIndex = slider.value;
+            }
+        }
+
+        // Click to bring to front temporarily
+        Object.values(boxes).forEach(box => {
+            box.addEventListener('click', function(e) {
+                if (!e.target.classList.contains('box-handle')) {
+                    this.style.zIndex = '1000';
+                    setTimeout(() => {
+                        const slider = document.querySelector(`#${this.id.replace('-box', '-z')}`);
+                        this.style.zIndex = slider.value;
+                    }, 2000);
+                }
+            });
+        });
+
+        // Initialize stacking order display
+        updateStackingOrder();
+    </script>
+</body>
+</html>

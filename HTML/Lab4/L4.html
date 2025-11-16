@@ -1,0 +1,605 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Your Name">
+    <meta name="description" content="TasteHub - Explore our mouth-watering restaurant menu with starters, main course, desserts, and drinks.">
+    <title>TasteHub Restaurant Menu</title>
+    <style>
+        /* Reset and Base Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f9f5f0;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header Styles */
+        header {
+            background-color: #8b4513;
+            color: white;
+            padding: 30px 0;
+            text-align: center;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .logo {
+            font-size: 3rem;
+            margin-bottom: 10px;
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+
+        .tagline {
+            font-style: italic;
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+            color: #f5deb3;
+        }
+
+        /* Navigation Styles */
+        nav {
+            background-color: #a0522d;
+            padding: 15px 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        nav ul {
+            display: flex;
+            justify-content: center;
+            list-style: none;
+            flex-wrap: wrap;
+        }
+
+        nav li {
+            margin: 0 15px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            padding: 8px 15px;
+            border-radius: 4px;
+            transition: background-color 0.3s;
+        }
+
+        nav a:hover {
+            background-color: #8b4513;
+        }
+
+        /* Main Content Styles */
+        main {
+            padding: 40px 0;
+        }
+
+        section {
+            margin-bottom: 50px;
+            background-color: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 2px 15px rgba(0,0,0,0.05);
+        }
+
+        section h2 {
+            color: #8b4513;
+            font-size: 2rem;
+            margin-bottom: 25px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #f5deb3;
+        }
+
+        .menu-items {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 25px;
+        }
+
+        article {
+            padding: 20px;
+            border: 1px solid #e6e6e6;
+            border-radius: 8px;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        article:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+
+        .dish-image {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+            border-radius: 6px;
+            margin-bottom: 15px;
+        }
+
+        .dish-name {
+            font-size: 1.3rem;
+            color: #8b4513;
+            margin-bottom: 10px;
+        }
+
+        .dish-description {
+            color: #666;
+            margin-bottom: 15px;
+            font-size: 0.95rem;
+        }
+
+        .dish-price {
+            font-weight: bold;
+            color: #d2691e;
+            font-size: 1.1rem;
+        }
+
+        .back-to-top {
+            display: inline-block;
+            margin-top: 20px;
+            color: #8b4513;
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .back-to-top:hover {
+            text-decoration: underline;
+        }
+
+        hr {
+            border: none;
+            height: 1px;
+            background-color: #e6e6e6;
+            margin: 40px 0;
+        }
+
+        /* Chef's Special Section */
+        .chef-special {
+            background-color: #fffaf0;
+            border: 2px solid #d2691e;
+            padding: 25px;
+            margin-top: 30px;
+            border-radius: 8px;
+        }
+
+        .chef-special legend {
+            font-size: 1.5rem;
+            color: #8b4513;
+            padding: 0 15px;
+            font-weight: bold;
+        }
+
+        /* Daily Offers */
+        .daily-offers {
+            background-color: #f5f5dc;
+            padding: 25px;
+            border-radius: 8px;
+            margin-top: 30px;
+        }
+
+        .daily-offers h3 {
+            color: #8b4513;
+            margin-bottom: 15px;
+            font-size: 1.5rem;
+        }
+
+        .offer-item {
+            margin-bottom: 15px;
+            padding-bottom: 15px;
+            border-bottom: 1px dashed #d2691e;
+        }
+
+        .offer-item:last-child {
+            margin-bottom: 0;
+            padding-bottom: 0;
+            border-bottom: none;
+        }
+
+        .offer-name {
+            font-weight: bold;
+            color: #8b4513;
+        }
+
+        .offer-price {
+            text-decoration: line-through;
+            color: #999;
+            margin-right: 10px;
+        }
+
+        .offer-discount {
+            font-weight: bold;
+            color: #d2691e;
+        }
+
+        /* Book Table Section */
+        .book-table {
+            text-align: center;
+            padding: 40px;
+            background-color: #8b4513;
+            color: white;
+            border-radius: 8px;
+            margin-top: 40px;
+        }
+
+        .book-table h2 {
+            color: white;
+            border-bottom: none;
+            margin-bottom: 20px;
+        }
+
+        .book-table p {
+            margin-bottom: 25px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .book-btn {
+            display: inline-block;
+            background-color: #f5deb3;
+            color: #8b4513;
+            padding: 12px 30px;
+            border-radius: 4px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.1rem;
+            transition: background-color 0.3s;
+        }
+
+        .book-btn:hover {
+            background-color: #e6c9a1;
+        }
+
+        /* Footer Styles */
+        footer {
+            background-color: #2c2c2c;
+            color: white;
+            padding: 40px 0 20px;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-bottom: 30px;
+        }
+
+        .footer-section h3 {
+            color: #f5deb3;
+            margin-bottom: 20px;
+            font-size: 1.3rem;
+        }
+
+        .footer-section p {
+            margin-bottom: 10px;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 15px;
+            margin-top: 15px;
+        }
+
+        .social-links a {
+            color: white;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .social-links a:hover {
+            color: #f5deb3;
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid #444;
+        }
+
+        .footer-bottom a {
+            color: #f5deb3;
+            text-decoration: none;
+        }
+
+        .footer-bottom a:hover {
+            text-decoration: underline;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            nav ul {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            nav li {
+                margin: 5px 0;
+            }
+            
+            .menu-items {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header Section -->
+    <header id="top">
+        <div class="container">
+            <div class="logo">🍽️</div>
+            <h1>TasteHub Restaurant</h1>
+            <p class="tagline">Deliciousness Delivered Fresh Every Day!</p>
+        </div>
+    </header>
+
+    <!-- Navigation Bar -->
+    <nav>
+        <div class="container">
+            <ul>
+                <li><a href="#starters">Starters</a></li>
+                <li><a href="#maincourse">Main Course</a></li>
+                <li><a href="#desserts">Desserts</a></li>
+                <li><a href="#drinks">Drinks</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="container">
+        <!-- Starters Section -->
+        <section id="starters">
+            <h2>Starters</h2>
+            <div class="menu-items">
+                <article>
+                    <img src="https://placehold.co/600x400/f5deb3/8b4513?text=Garlic+Bread" alt="Garlic Bread" class="dish-image">
+                    <h3 class="dish-name">Garlic Bread</h3>
+                    <p class="dish-description">Freshly baked bread topped with garlic butter and herbs, served warm.</p>
+                    <p class="dish-price">$6.99</p>
+                </article>
+                
+                <article>
+                    <img src="https://placehold.co/600x400/f5deb3/8b4513?text=Bruschetta" alt="Bruschetta" class="dish-image">
+                    <h3 class="dish-name">Bruschetta</h3>
+                    <p class="dish-description">Toasted bread topped with fresh tomatoes, basil, and olive oil.</p>
+                    <p class="dish-price">$8.50</p>
+                </article>
+                
+                <article>
+                    <img src="https://placehold.co/600x400/f5deb3/8b4513?text=Chicken+Wings" alt="Chicken Wings" class="dish-image">
+                    <h3 class="dish-name">Spicy Chicken Wings</h3>
+                    <p class="dish-description">Crispy chicken wings tossed in our signature spicy sauce, served with celery sticks and ranch dip.</p>
+                    <p class="dish-price">$12.99</p>
+                </article>
+                
+                <article>
+                    <img src="https://placehold.co/600x400/f5deb3/8b4513?text=Mozzarella+Sticks" alt="Mozzarella Sticks" class="dish-image">
+                    <h3 class="dish-name">Mozzarella Sticks</h3>
+                    <p class="dish-description">Breaded and fried mozzarella cheese sticks served with marinara sauce.</p>
+                    <p class="dish-price">$9.99</p>
+                </article>
+            </div>
+            
+            <fieldset class="chef-special">
+                <legend>Chef's Special Starter</legend>
+                <article>
+                    <img src="https://placehold.co/600x400/f5deb3/8b4513?text=Truffle+Risotto+Balls" alt="Truffle Risotto Balls" class="dish-image">
+                    <h3 class="dish-name">Truffle Risotto Balls</h3>
+                    <p class="dish-description">Crispy arancini filled with creamy truffle risotto and melted mozzarella, served with aioli dip.</p>
+                    <p class="dish-price">$14.99</p>
+                </article>
+            </fieldset>
+            
+            <a href="#top" class="back-to-top">Back to Top</a>
+        </section>
+
+        <hr>
+
+        <!-- Main Course Section -->
+        <section id="maincourse">
+            <h2>Main Course</h2>
+            <div class="menu-items">
+                <article>
+                    <img src="https://placehold.co/600x400/f5deb3/8b4513?text=Grilled+Salmon" alt="Grilled Salmon" class="dish-image">
+                    <h3 class="dish-name">Grilled Salmon</h3>
+                    <p class="dish-description">Fresh salmon fillet grilled to perfection, served with seasonal vegetables and lemon butter sauce.</p>
+                    <p class="dish-price">$24.99</p>
+                </article>
+                
+                <article>
+                    <img src="https://placehold.co/600x400/f5deb3/8b4513?text=Beef+Steak" alt="Beef Steak" class="dish-image">
+                    <h3 class="dish-name">Ribeye Steak</h3>
+                    <p class="dish-description">12oz premium ribeye steak cooked to your preference, served with mashed potatoes and grilled asparagus.</p>
+                    <p class="dish-price">$32.99</p>
+                </article>
+                
+                <article>
+                    <img src="https://placehold.co/600x400/f5deb3/8b4513?text=Vegetable+Pasta" alt="Vegetable Pasta" class="dish-image">
+                    <h3 class="dish-name">Vegetable Primavera</h3>
+                    <p class="dish-description">Fresh pasta tossed with seasonal vegetables in a light cream sauce.</p>
+                    <p class="dish-price">$18.99</p>
+                </article>
+                
+                <article>
+                    <img src="https://placehold.co/600x400/f5deb3/8b4513?text=Chicken+Alfredo" alt="Chicken Alfredo" class="dish-image">
+                    <h3 class="dish-name">Chicken Alfredo</h3>
+                    <p class="dish-description">Grilled chicken breast served over fettuccine pasta with rich Alfredo sauce.</p>
+                    <p class="dish-price">$22.99</p>
+                </article>
+            </div>
+            
+            <fieldset class="chef-special">
+                <legend>Chef's Special Main Course</legend>
+                <article>
+                    <img src="https://placehold.co/600x400/f5deb3/8b4513?text=Lobster+Risotto" alt="Lobster Risotto" class="dish-image">
+                    <h3 class="dish-name">Lobster Risotto</h3>
+                    <p class="dish-description">Creamy Arborio rice cooked with fresh lobster, saffron, and Parmesan cheese.</p>
+                    <p class="dish-price">$36.99</p>
+                </article>
+            </fieldset>
+            
+            <a href="#top" class="back-to-top">Back to Top</a>
+        </section>
+
+        <hr>
+
+        <!-- Desserts Section -->
+        <section id="desserts">
+            <h2>Desserts</h2>
+            <div class="menu-items">
+                <article>
+                    <img src="https://placehold.co/600x400/f5deb3/8b4513?text=Chocolate+Cake" alt="Chocolate Cake" class="dish-image">
+                    <h3 class="dish-name">Chocolate Lava Cake</h3>
+                    <p class="dish-description">Warm chocolate cake with a molten center, served with vanilla ice cream.</p>
+                    <p class="dish-price">$8.99</p>
+                </article>
+                
+                <article>
+                    <img src="https://placehold.co/600x400/f5deb3/8b4513?text=Cheesecake" alt="Cheesecake" class="dish-image">
+                    <h3 class="dish-name">New York Cheesecake</h3>
+                    <p class="dish-description">Classic creamy cheesecake with a graham cracker crust and berry compote.</p>
+                    <p class="dish-price">$9.50</p>
+                </article>
+                
+                <article>
+                    <img src="https://placehold.co/600x400/f5deb3/8b4513?text=Tiramisu" alt="Tiramisu" class="dish-image">
+                    <h3 class="dish-name">Tiramisu</h3>
+                    <p class="dish-description">Italian dessert made with layers of coffee-soaked ladyfingers and mascarpone cream.</p>
+                    <p class="dish-price">$10.99</p>
+                </article>
+                
+                <article>
+                    <img src="https://placehold.co/600x400/f5deb3/8b4513?text=Apple+Pie" alt="Apple Pie" class="dish-image">
+                    <h3 class="dish-name">Apple Pie</h3>
+                    <p class="dish-description">Homemade apple pie with cinnamon and nutmeg, served warm with vanilla ice cream.</p>
+                    <p class="dish-price">$8.99</p>
+                </article>
+            </div>
+            
+            <aside class="daily-offers">
+                <h3>Daily Dessert Special</h3>
+                <div class="offer-item">
+                    <p class="offer-name">Chocolate Mousse</p>
+                    <p><span class="offer-price">$9.99</span> <span class="offer-discount">$7.99</span></p>
+                </div>
+                <div class="offer-item">
+                    <p class="offer-name">Fruit Tart</p>
+                    <p><span class="offer-price">$8.50</span> <span class="offer-discount">$6.50</span></p>
+                </div>
+            </aside>
+            
+            <a href="#top" class="back-to-top">Back to Top</a>
+        </section>
+
+        <hr>
+
+        <!-- Drinks Section -->
+        <section id="drinks">
+            <h2>Drinks</h2>
+            <div class="menu-items">
+                <article>
+                    <img src="https://placehold.co/600x400/f5deb3/8b4513?text=Fresh+Juice" alt="Fresh Juice" class="dish-image">
+                    <h3 class="dish-name">Fresh Orange Juice</h3>
+                    <p class="dish-description">Freshly squeezed orange juice, served chilled.</p>
+                    <p class="dish-price">$5.99</p>
+                </article>
+                
+                <article>
+                    <img src="https://placehold.co/600x400/f5deb3/8b4513?text=Iced+Tea" alt="Iced Tea" class="dish-image">
+                    <h3 class="dish-name">Iced Tea</h3>
+                    <p class="dish-description">Freshly brewed iced tea with lemon, sweetened to perfection.</p>
+                    <p class="dish-price">$4.50</p>
+                </article>
+                
+                <article>
+                    <img src="https://placehold.co/600x400/f5deb3/8b4513?text=Cocktail" alt="Cocktail" class="dish-image">
+                    <h3 class="dish-name">Mojito</h3>
+                    <p class="dish-description">Refreshing cocktail with rum, mint, lime, and soda water.</p>
+                    <p class="dish-price">$12.99</p>
+                </article>
+                
+                <article>
+                    <img src="https://placehold.co/600x400/f5deb3/8b4513?text=Coffee" alt="Coffee" class="dish-image">
+                    <h3 class="dish-name">Cappuccino</h3>
+                    <p class="dish-description">Rich espresso topped with steamed milk foam.</p>
+                    <p class="dish-price">$4.99</p>
+                </article>
+            </div>
+            
+            <aside class="daily-offers">
+                <h3>Happy Hour Specials (4pm-6pm)</h3>
+                <div class="offer-item">
+                    <p class="offer-name">House Wine</p>
+                    <p><span class="offer-price">$8.99</span> <span class="offer-discount">$6.99</span></p>
+                </div>
+                <div class="offer-item">
+                    <p class="offer-name">Craft Beer</p>
+                    <p><span class="offer-price">$7.50</span> <span class="offer-discount">$5.50</span></p>
+                </div>
+            </aside>
+            
+            <a href="#top" class="back-to-top">Back to Top</a>
+        </section>
+
+        <!-- Book Table Section -->
+        <section class="book-table">
+            <h2>Ready to Experience TasteHub?</h2>
+            <p>Book your table now and enjoy an unforgettable dining experience with our exquisite dishes and impeccable service.</p>
+            <a href="#" class="book-btn">Book a Table</a>
+        </section>
+    </main>
+
+    <!-- Footer Section -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Contact Us</h3>
+                    <p>123 Gourmet Avenue, Food District</p>
+                    <p>Cityville, FC 12345</p>
+                    <p>Phone: (555) 123-4567</p>
+                    <p>Email: info@tastehub.com</p>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Opening Hours</h3>
+                    <p>Monday - Thursday: 11am - 10pm</p>
+                    <p>Friday - Saturday: 11am - 11pm</p>
+                    <p>Sunday: 12pm - 9pm</p>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Follow Us</h3>
+                    <div class="social-links">
+                        <a href="#">Facebook</a>
+                        <a href="#">Instagram</a>
+                        <a href="#">Twitter</a>
+                        <a href="#">TikTok</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>© 2025 TasteHub Restaurant | All Rights Reserved</p>
+                <p><a href="#top">Back to Top</a></p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

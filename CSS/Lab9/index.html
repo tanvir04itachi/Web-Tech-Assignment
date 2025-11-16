@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Your Name">
+    <meta name="description" content="DailyNews - Your Trusted Source for Latest News">
+    <title>DailyNews | Latest News Portal</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header Section -->
+    <header class="main-header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo-section">
+                    <div class="logo">
+                        <i class="fas fa-newspaper"></i>
+                    </div>
+                    <div class="site-info">
+                        <h1>DailyNews</h1>
+                        <p class="tagline">Your Trusted Source for Latest News</p>
+                    </div>
+                </div>
+                
+                <div class="header-actions">
+                    <div class="search-box">
+                        <input type="text" placeholder="Search news..." class="search-input">
+                        <button class="search-btn">
+                            <i class="fas fa-search"></i>
+                        </button>
+                    </div>
+                    <div class="date-display">
+                        <i class="fas fa-calendar-alt"></i>
+                        <span id="current-date">March 20, 2025</span>
+                    </div>
+                </div>
+            </div>
+            
+            <nav class="main-nav">
+                <ul class="nav-links">
+                    <li><a href="#" class="nav-link active">Home</a></li>
+                    <li><a href="#" class="nav-link">World</a></li>
+                    <li><a href="#" class="nav-link">Politics</a></li>
+                    <li><a href="#" class="nav-link">Business</a></li>
+                    <li><a href="#" class="nav-link">Technology</a></li>
+                    <li><a href="#" class="nav-link">Sports</a></li>
+                    <li><a href="#" class="nav-link">Entertainment</a></li>
+                    <li><a href="#" class="nav-link">Health</a></li>
+                    <li><a href="#" class="nav-link">Science</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Breaking News Banner -->
+    <div class="breaking-news">
+        <div class="container">
+            <div class="breaking-label">
+                <i class="fas fa-bolt"></i>
+                BREAKING NEWS
+            </div>
+            <div class="breaking-content">
+                <span class="news-ticker">Global Climate Summit Reaches Historic Agreement • Tech Giant Announces Revolutionary AI Breakthrough • National Team Qualifies for World Championship</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Layout Container -->
+    <main class="main-content">
+        <div class="container">
+            <!-- Three Column Layout -->
+            <div class="layout-container">
+                <!-- Sidebar - Categories -->
+                <aside class="sidebar categories-sidebar">
+                    <div class="sidebar-header">
+                        <h2><i class="fas fa-list-alt"></i> Categories</h2>
+                    </div>
+                    <ul class="category-list">
+                        <li class="category-item">
+                            <a href="#" class="category-link">
+                                <i class="fas fa-globe-americas"></i>
+                                World News
+                                <span class="news-count">128</span>
+                            </a>
+                        </li>
+                        <li class="category-item">
+                            <a href="#" class="category-link">
+                                <i class="fas fa-landmark"></i>
+                                Politics
+                                <span class="news-count">64</span>
+                            </a>
+                        </li>
+                        <li class="category-item">
+                            <a href="#" class="category-link">
+                                <i class="fas fa-chart-line"></i>
+                                Business
+                                <span class="news-count">89</span>
+                            </a>
+                        </li>
+                        <li class="category-item">
+                            <a href="#" class="category-link">
+                                <i class="fas fa-laptop-code"></i>
+                                Technology
+                                <span class="news-count">156</span>
+                            </a>
+                        </li>
+                        <li class="category-item">
+                            <a href="#" class="category-link">
+                                <i class="fas fa-running"></i>
+                                Sports
+                                <span class="news-count">203</span>
+                            </a>
+                        </li>
+                        <li class="category-item">
+                            <a href="#" class="category-link">
+                                <i class="fas fa-film"></i>
+                                Entertainment
+                                <span class="news-count">97</span>
+                            </a>
+                        </li>
+                        <li class="category-item">
+                            <a href="#" class="category-link">
+                                <i class="fas fa-heartbeat"></i>
+                                Health
+                                <span class="news-count">72</span>
+                            </a>
+                        </li>
+                        <li class="category-item">
+                            <a href="#" class="category-link">
+                                <i class="fas fa-flask"></i>
+                                Science
+                                <span class="news-count">58</span>
+                            </a>
+                        </li>
+                    </ul>
+
+                    <div class="trending-topics">
+                        <h3><i class="fas fa-fire"></i> Trending Topics</h3>
+                        <div class="topic-tags">
+                            <span class="topic-tag">#ClimateChange</span>
+                            <span class="topic-tag">#AIRevolution</span>
+                            <span class="topic-tag">#SpaceExploration</span>
+                            <span class="topic-tag">#DigitalCurrency</span>
+                            <span class="topic-tag">#SustainableTech</span>
+                        </div>
+                    </div>
+
+                    <div class="newsletter-widget">
+                        <h3><i class="fas fa-envelope"></i> Newsletter</h3>
+                        <p>Stay updated with our daily news digest</p>
+                        <form class="newsletter-form">
+                            <input type="email" placeholder="Enter your email" required>
+                            <button type="submit" class="subscribe-btn">Subscribe</button>
+                        </form>
+                    </div>
+                </aside>
+
+                <!-- Main Content - Articles -->
+                <section class="main-articles">
+                    <div class="content-header">
+                        <h2><i class="fas fa-star"></i> Featured Stories</h2>
+                        <div class="view-controls">
+                            <button class="view-btn active"><i class="fas fa-th-large"></i></button>
+                            <button class="view-btn"><i class="fas fa-list"></i></button>
+                        </div>
+                    </div>
+
+                    <div class="articles-grid">
+                        <!-- Featured Article -->
+                        <article class="article-card featured">
+                            <div class="article-image">
+                                <img src="https://placehold.co/600x400/3498db/ffffff?text=Climate+Summit" alt="Global Climate Summit">
+                                <span class="article-badge">Featured</span>
+                            </div>
+                            <div class="article-content">
+                                <div class="article-meta">
+                                    <span class="category world">World</span>
+                                    <span class="publish-time"><i class="far fa-clock"></i> 2 hours ago</span>
+                                </div>
+                                <h3 class="article-title">Global Leaders Reach Historic Climate Agreement at International Summit</h3>
+                                <p class="article-excerpt">
+                                    World leaders have reached a groundbreaking agreement on climate action, committing to 
+                                    unprecedented carbon reduction targets and renewable energy investments. The summit 
+                                    concluded with binding commitments from 150 nations.
+                                </p>
+                                <div class="article-footer">
+                                    <div class="author">
+                                        <img src="https://placehold.co/30x30/3498db/ffffff?text=ES" alt="Emma Smith" class="author-img">
+                                        <span class="author-name">By Emma Smith</span>
+                                    </div>
+                                    <div class="article-stats">
+                                        <span class="stat"><i class="far fa-eye"></i> 2.4K</span>
+                                        <span class="stat"><i class="far fa-comment"></i> 156</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </article>
+
+                        <!-- Regular Articles -->
+                        <article class="article-card">
+                            <div class="article-image">
+                                <img src="https://placehold.co/600x400/2ecc71/ffffff?text=AI+Breakthrough" alt="AI Technology">
+                                <span class="article-badge tech">Technology</span>
+                            </div>
+                            <div class="article-content">
+                                <div class="article-meta">
+                                    <span class="category technology">Tech</span>
+                                    <span class="publish-time"><i class="far fa-clock"></i> 4 hours ago</span>
+                                </div>
+                                <h3 class="article-title">Revolutionary AI System Demonstrates Human-Level Reasoning Capabilities</h3>
+                                <p class="article-excerpt">
+                                    Researchers have developed an artificial intelligence system that shows remarkable 
+                                    progress in logical reasoning and problem-solving, potentially transforming how 
+                                    we approach complex computational challenges.
+                                </p>
+                                <div class="article-footer">
+                                    <div class="author">
+                                        <img src="https://placehold.co/30x30/2ecc71/ffffff?text=DC" alt="David Chen" class="author-img">
+                                        <span class="author-name">By David Chen</span>
+                                    </div>
+                                    <div class="article-stats">
+                                        <span class="stat"><i class="far fa-eye"></i> 3.1K</span>
+                                        <span class="stat"><i class="far fa-comment"></i> 289</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </article>
+
+                        <article class="article-card">
+                            <div class="article-image">
+                                <img src="https://placehold.co/600x400/e74c3c/ffffff?text=Sports+Victory" alt="Sports Championship">
+                                <span class="article-badge sports">Sports</span>
+                            </div>
+                            <div class="article-content">
+                                <div class="article-meta">
+                                    <span class="category sports">Sports</span>
+                                    <span class="publish-time"><i class="far fa-clock"></i> 6 hours ago</span>
+                                </div>
+                                <h3 class="article-title">National Team Secures Championship Title in Thrilling Final Match</h3>
+                                <p class="article-excerpt">
+                                    In an unforgettable showdown, the national team clinched the international championship 
+                                    with a last-minute victory, bringing home the trophy after a decade-long drought.
+                                </p>
+                                <div class="article-footer">
+                                    <div class="author">
+                                        <img src="https://placehold.co/30x30/e74c3c/ffffff?text=MR" alt="Mike Rodriguez" class="author-img">
+                                        <span class="author-name">By Mike Rodriguez</span>
+                                    </div>
+                                    <div class="article-stats">
+                                        <span class="stat"><i class="far fa-eye"></i> 4.2K</span>
+                                        <span class="stat"><i class="far fa-comment"></i> 412</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </article>
+
+                        <article class="article-card">
+                            <div class="article-image">
+                                <img src="https://placehold.co/600x400/9b59b6/ffffff?text=Market+Update" alt="Stock Market">
+                                <span class="article-badge business">Business</span>
+                            </div>
+                            <div class="article-content">
+                                <div class="article-meta">
+                                    <span class="category business">Business</span>
+                                    <span class="publish-time"><i class="far fa-clock"></i> 8 hours ago</span>
+                                </div>
+                                <h3 class="article-title">Global Markets Reach Record Highs Amid Economic Recovery Signals</h3>
+                                <p class="article-excerpt">
+                                    Stock markets worldwide have surged to unprecedented levels as economic indicators 
+                                    show strong recovery trends, with technology and renewable energy sectors leading 
+                                    the growth.
+                                </p>
+                                <div class="article-footer">
+                                    <div class="author">
+                                        <img src="https://placehold.co/30x30/9b59b6/ffffff?text=SW" alt="Sarah Wilson" class="author-img">
+                                        <span class="author-name">By Sarah Wilson</span>
+                                    </div>
+                                    <div class="article-stats">
+                                        <span class="stat"><i class="far fa-eye"></i> 1.8K</span>
+                                        <span class="stat"><i class="far fa-comment"></i> 94</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+
+                    <!-- Load More Button -->
+                    <div class="load-more-section">
+                        <button class="load-more-btn">
+                            <i class="fas fa-plus"></i> Load More Articles
+                        </button>
+                    </div>
+                </section>
+
+                <!-- Advertisement Sidebar -->
+                <aside class="sidebar ads-sidebar">
+                    <div class="sidebar-header">
+                        <h2><i class="fas fa-ad"></i> Advertisements</h2>
+                    </div>
+
+                    <!-- Premium Ad -->
+                    <div class="ad-card premium-ad">
+                        <div class="ad-badge">Premium Partner</div>
+                        <div class="ad-content">
+                            <h3>TechConference 2025</h3>
+                            <p>Join the largest gathering of tech innovators and thought leaders. Early bird registration now open!</p>
+                            <div class="ad-image">
+                                <img src="https://placehold.co/250x150/3498db/ffffff?text=Tech+Conference" alt="Tech Conference">
+                            </div>
+                            <button class="ad-cta">Register Now</button>
+                        </div>
+                    </div>
+
+                    <!-- Regular Ads -->
+                    <div class="ad-card">
+                        <div class="ad-content">
+                            <h4>Premium News Subscription</h4>
+                            <p>Get ad-free experience and exclusive content</p>
+                            <button class="ad-cta secondary">Subscribe</button>
+                        </div>
+                    </div>
+
+                    <div class="ad-card">
+                        <div class="ad-content">
+                            <h4>Mobile App Available</h4>
+                            <p>Download our app for better reading experience</p>
+                            <div class="app-badges">
+                                <button class="app-btn"><i class="fab fa-apple"></i> App Store</button>
+                                <button class="app-btn"><i class="fab fa-google-play"></i> Play Store</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Weather Widget -->
+                    <div class="weather-widget">
+                        <h3><i class="fas fa-cloud-sun"></i> Weather</h3>
+                        <div class="weather-content">
+                            <div class="weather-main">
+                                <div class="temperature">24°C</div>
+                                <div class="weather-desc">Partly Cloudy</div>
+                            </div>
+                            <div class="weather-details">
+                                <div class="detail">
+                                    <i class="fas fa-wind"></i>
+                                    <span>15 km/h</span>
+                                </div>
+                                <div class="detail">
+                                    <i class="fas fa-tint"></i>
+                                    <span>65%</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Social Media Widget -->
+                    <div class="social-widget">
+                        <h3><i class="fas fa-share-alt"></i> Follow Us</h3>
+                        <div class="social-links">
+                            <a href="#" class="social-link facebook">
+                                <i class="fab fa-facebook-f"></i>
+                                <span>Facebook</span>
+                            </a>
+                            <a href="#" class="social-link twitter">
+                                <i class="fab fa-twitter"></i>
+                                <span>Twitter</span>
+                            </a>
+                            <a href="#" class="social-link instagram">
+                                <i class="fab fa-instagram"></i>
+                                <span>Instagram</span>
+                            </a>
+                            <a href="#" class="social-link linkedin">
+                                <i class="fab fa-linkedin-in"></i>
+                                <span>LinkedIn</span>
+                            </a>
+                        </div>
+                    </div>
+                </aside>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>DailyNews</h3>
+                    <p>Your trusted source for accurate, timely, and comprehensive news coverage from around the world.</p>
+                    <div class="contact-info">
+                        <p><i class="fas fa-envelope"></i> contact@dailynews.com</p>
+                        <p><i class="fas fa-phone"></i> +1 (555) 123-4567</p>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Editorial Policy</a></li>
+                        <li><a href="#">Careers</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Categories</h4>
+                    <ul>
+                        <li><a href="#">World News</a></li>
+                        <li><a href="#">Technology</a></li>
+                        <li><a href="#">Business</a></li>
+                        <li><a href="#">Sports</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Legal</h4>
+                    <ul>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                        <li><a href="#">Cookie Policy</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 DailyNews. All rights reserved. | Committed to delivering quality journalism.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Set current date
+        document.getElementById('current-date').textContent = new Date().toLocaleDateString('en-US', {
+            year: 'numeric',
+            month: 'long',
+            day: 'numeric'
+        });
+
+        // View controls functionality
+        const viewBtns = document.querySelectorAll('.view-btn');
+        const articlesGrid = document.querySelector('.articles-grid');
+
+        viewBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                viewBtns.forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+                
+                if (btn.querySelector('.fa-list')) {
+                    articlesGrid.classList.add('list-view');
+                } else {
+                    articlesGrid.classList.remove('list-view');
+                }
+            });
+        });
+
+        // Load more functionality
+        const loadMoreBtn = document.querySelector('.load-more-btn');
+        loadMoreBtn.addEventListener('click', function() {
+            this.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Loading...';
+            setTimeout(() => {
+                this.innerHTML = '<i class="fas fa-check"></i> All Articles Loaded';
+                this.disabled = true;
+            }, 2000);
+        });
+
+        // Newsletter form submission
+        const newsletterForm = document.querySelector('.newsletter-form');
+        newsletterForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            const submitBtn = this.querySelector('.subscribe-btn');
+            submitBtn.innerHTML = '<i class="fas fa-check"></i> Subscribed!';
+            submitBtn.disabled = true;
+        });
+    </script>
+</body>
+</html>
