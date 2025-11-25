@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AIUB Student Portal - Registration</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>AIUB Student Portal</h1>
+            <p>Faculty of Science and Technology, Department of Computer Science</p>
+            <p>Web Technologies</p>
+        </div>
+        
+        <div class="form-container">
+            <form id="registrationForm">
+                <div class="form-section">
+                    <div class="form-group">
+                        <label for="fullName">Full Name</label>
+                        <input type="text" id="fullName" placeholder="Enter your full name">
+                        <div class="error" id="fullNameError"></div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="text" id="email" placeholder="Enter your email address">
+                        <div class="error" id="emailError"></div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="password">Password</label>
+                        <input type="password" id="password" placeholder="Enter your password">
+                        <div class="error" id="passwordError"></div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="confirmPassword">Confirm Password</label>
+                        <input type="password" id="confirmPassword" placeholder="Confirm your password">
+                        <div class="error" id="confirmPasswordError"></div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="phoneNumber">Phone Number</label>
+                        <input type="text" id="phoneNumber" placeholder="Enter your phone number">
+                        <div class="error" id="phoneNumberError"></div>
+                    </div>
+                </div>
+                
+                <div class="requirements-section">
+                    <div class="requirements">
+                        <h3>Registration Requirements:</h3>
+                        <ul>
+                            <li>Email must contain "@" and "."</li>
+                            <li>Password must be at least 6 characters</li>
+                            <li>Password and Confirm Password must match</li>
+                            <li>Phone number must contain only digits</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <button type="submit">Register Now</button>
+                
+                <div class="success-message" id="successMessage">
+                    Registration Successful!
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
