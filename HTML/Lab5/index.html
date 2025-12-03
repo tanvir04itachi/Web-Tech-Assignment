@@ -1,130 +1,137 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="author" content="Your Name">
-    <meta name="description" content="DailyFlash - Breaking world news and international stories.">
-    <title>DailyFlash | World News</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8" />
+  <meta name="author" content="Your Name" />
+  <meta name="description" content="DailyFlash - Breaking news and trending stories from around the world." />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>DailyFlash | Home</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
-<body>
-    <!-- Header Section -->
-    <header>
-        <div class="container">
-            <div class="header-content">
-                <div class="logo">DF</div>
-                <div class="site-title">
-                    <h1>DailyFlash</h1>
-                    <p class="tagline">Your Source for Instant News</p>
-                </div>
-            </div>
-        </div>
-    </header>
 
-    <!-- Navigation Bar -->
-    <nav>
-        <div class="container">
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="world.html" class="current">World</a></li>
-                <li><a href="sports.html">Sports</a></li>
-                <li><a href="#">Tech</a></li>
-                <li><a href="#">Lifestyle</a></li>
-                <li><a href="#">Contact</a></li>
-            </ul>
-        </div>
+<body id="top">
+  <a class="skip-link" href="#content">Skip to content</a>
+
+  <header class="container">
+    <div class="brand">
+      <div class="logo" aria-hidden="true"></div>
+      <div>
+        <h1>DailyFlash</h1>
+        <p class="tagline">Your Source for Instant News</p>
+      </div>
+    </div>
+
+    <nav aria-label="Primary">
+      <ul>
+        <li><a class="active" href="index.html">Home</a></li>
+        <li><a href="world.html">World</a></li>
+        <li><a href="sports.html">Sports</a></li>
+        <li><a href="tech.html">Tech</a></li>
+        <li><a href="lifestyle.html">Lifestyle</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
     </nav>
+  </header>
 
-    <!-- Main Content -->
-    <main class="container">
-        <div class="main-content">
-            <!-- Articles Section -->
-            <section class="articles">
-                <article>
-                    <h2>International Trade Agreement Reached After Months of Negotiation</h2>
-                    <span class="pub-date">Published: March 14, 2025</span>
-                    <img src="https://placehold.co/800x400/2d3748/white?text=Trade+Agreement" alt="Trade agreement signing" class="article-thumbnail">
-                    <p>After eight months of intense negotiations, representatives from 15 nations have signed a comprehensive trade agreement that aims to reduce tariffs and streamline cross-border commerce. The pact is expected to boost economic growth across the participating countries.</p>
-                    <p>The agreement includes provisions for digital trade, environmental protections, and labor standards. Analysts predict the deal could increase global trade by up to 3% annually once fully implemented.</p>
-                    <a href="#" class="read-more">Read More</a>
-                </article>
+  <main class="container" id="content">
+    <div class="grid">
+      <section class="card articles" aria-label="Latest stories">
+        <p class="section-title">Latest News</p>
 
-                <hr>
+        <article>
+          <h2>World Leaders Meet for Climate Summit</h2>
+          <div class="meta">
+            <time datetime="2025-11-30">Nov 30, 2025</time>
+            <small>Category: World</small>
+          </div>
+          <img class="thumb" src="https://images.unsplash.com/photo-1529107386315-e1a2ed48a620?auto=format&fit=crop&w=1200&q=70"
+               alt="People at a conference discussing climate policy" />
+          <p class="summary">
+            Delegations from multiple countries gathered to discuss emissions targets, green funding, and regional climate resilience.
+            Negotiators focused on practical timelines and stronger accountability measures for high-impact sectors.
+            Analysts say this round could define the next decade of international cooperation.
+          </p>
+          <a class="readmore" href="world.html">Read More</a>
+        </article>
 
-                <article>
-                    <h2>UN Peacekeeping Mission Extended in Conflict Region</h2>
-                    <span class="pub-date">Published: March 12, 2025</span>
-                    <img src="https://placehold.co/800x400/1a365d/white?text=UN+Peacekeeping" alt="UN peacekeeping forces" class="article-thumbnail">
-                    <p>The United Nations Security Council has voted unanimously to extend the peacekeeping mission in the troubled region for another year. The decision comes amid ongoing efforts to stabilize the area and facilitate humanitarian aid delivery.</p>
-                    <p>The mission's mandate now includes additional support for local elections scheduled for later this year. UN officials report significant progress in disarmament efforts but acknowledge challenges remain.</p>
-                    <a href="#" class="read-more">Read More</a>
-                </article>
+        <hr />
 
-                <hr>
+        <article>
+          <h2>National Team Wins Championship</h2>
+          <div class="meta">
+            <time datetime="2025-11-28">Nov 28, 2025</time>
+            <small>Category: Sports</small>
+          </div>
+          <img class="thumb" src="https://images.unsplash.com/photo-1517649763962-0c623066013b?auto=format&fit=crop&w=1200&q=70"
+               alt="A stadium scene celebrating a championship victory" />
+          <p class="summary">
+            In a dramatic final, the national team secured a late winning goal and held off a fierce comeback attempt.
+            Fans flooded the streets in celebration as the captain lifted the trophy.
+            Coaches praised discipline, teamwork, and the team’s defensive resilience.
+          </p>
+          <a class="readmore" href="sports.html">Read More</a>
+        </article>
 
-                <article>
-                    <h2>Global Tourism Shows Strong Recovery Post-Pandemic</h2>
-                    <span class="pub-date">Published: March 10, 2025</span>
-                    <img src="https://placehold.co/800x400/3182ce/white?text=Tourism+Recovery" alt="Tourists at popular destination" class="article-thumbnail">
-                    <p>International tourism has rebounded to pre-pandemic levels according to the latest data from the World Tourism Organization. Popular destinations are reporting record numbers of visitors, signaling a robust recovery for the global travel industry.</p>
-                    <p>The resurgence is attributed to pent-up demand, improved travel infrastructure, and new digital nomad visa programs in several countries. Industry experts predict continued growth through the remainder of the year.</p>
-                    <a href="#" class="read-more">Read More</a>
-                </article>
-            </section>
+        <hr />
 
-            <!-- Sidebar Section -->
-            <aside class="sidebar">
-                <div class="sidebar-section">
-                    <h3>World Headlines</h3>
-                    <ul>
-                        <li><a href="#">European Union Announces New Digital Privacy Regulations</a></li>
-                        <li><a href="#">Asian Markets Respond to New Economic Policies</a></li>
-                        <li><a href="#">African Nations Form New Economic Partnership</a></li>
-                        <li><a href="#">Pacific Island Nations Address Climate Change Concerns</a></li>
-                        <li><a href="#">Middle East Peace Talks Resume After Hiatus</a></li>
-                    </ul>
-                </div>
+        <article>
+          <h2>New Smartphone Sets Record Sales</h2>
+          <div class="meta">
+            <time datetime="2025-11-25">Nov 25, 2025</time>
+            <small>Category: Tech</small>
+          </div>
+          <img class="thumb" src="https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?auto=format&fit=crop&w=1200&q=70"
+               alt="A smartphone on a desk showing an app screen" />
+          <p class="summary">
+            The latest flagship phone reportedly crossed record pre-order numbers thanks to a faster chip and improved camera system.
+            Retailers said demand was strongest for the premium storage variants and new color.
+            Industry watchers expect competitors to respond with aggressive pricing this quarter.
+          </p>
+          <a class="readmore" href="tech.html">Read More</a>
+        </article>
+      </section>
 
-                <div class="sidebar-section">
-                    <h3>Editor's Pick</h3>
-                    <div class="trending-item">
-                        <a href="#">The Changing Dynamics of International Diplomacy</a>
-                    </div>
-                    <div class="trending-item">
-                        <a href="#">How Global Supply Chains Are Evolving</a>
-                    </div>
-                </div>
+      <aside class="card" aria-label="Top headlines sidebar">
+        <h3>Top Headlines</h3>
+        <ul class="headlines">
+          <li><a href="world.html">Global markets react to new energy policy talks</a></li>
+          <li><a href="sports.html">Star striker returns ahead of key qualifier</a></li>
+          <li><a href="tech.html">AI assistant update rolls out to more devices</a></li>
+          <li><a href="world.html">Relief operations expand after heavy rainfall</a></li>
+          <li><a href="lifestyle.html">Healthy meal trends that actually save time</a></li>
+        </ul>
 
-                <div class="sidebar-section">
-                    <div class="ad-box">
-                        <h4>Travel Deals</h4>
-                        <p>Explore the world with our exclusive travel packages and discounts.</p>
-                        <a href="#" class="cta-button">Discover Offers</a>
-                    </div>
-                </div>
-            </aside>
+        <div class="pill">Editor’s Pick</div>
+        <ul class="picks">
+          <li><a href="world.html">Inside the climate summit: what’s on the table</a></li>
+          <li><a href="sports.html">How the champions changed tactics mid-game</a></li>
+        </ul>
+
+        <div class="ad" role="note" aria-label="Advertisement">
+          <strong>Advertisement</strong>
+          <p>
+            Sponsor your brand on DailyFlash! Reach readers who love quick, credible updates.
+            <a href="contact.html">Contact us</a> for packages.
+          </p>
         </div>
+      </aside>
+    </div>
 
-        <a href="#" class="back-to-top">Back to Top</a>
-    </main>
+    <a class="back-top" href="#top">↑ Back to Top</a>
+  </main>
 
-    <!-- Footer Section -->
-    <footer>
-        <div class="container">
-            <div class="footer-content">
-                <div class="copyright">© 2025 DailyFlash</div>
-                <div class="social-links">
-                    <a href="#">Facebook</a>
-                    <a href="#">X (Twitter)</a>
-                    <a href="#">Instagram</a>
-                    <a href="#">LinkedIn</a>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>All Rights Reserved.</p>
-            </div>
-        </div>
-    </footer>
+  <footer class="container">
+    <div class="footer-row">
+      <div>© 2025 DailyFlash</div>
+      <div class="social" aria-label="Social links">
+        <a href="#" aria-label="Facebook">Facebook</a>
+        <a href="#" aria-label="X">X (Twitter)</a>
+        <a href="#" aria-label="Instagram">Instagram</a>
+        <a href="#" aria-label="LinkedIn">LinkedIn</a>
+      </div>
+      <div>Credits: DailyFlash Media</div>
+    </div>
+    <div class="note">All Rights Reserved.</div>
+  </footer>
 </body>
 </html>

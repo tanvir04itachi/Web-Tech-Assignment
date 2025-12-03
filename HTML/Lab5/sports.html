@@ -1,130 +1,135 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="author" content="Your Name">
-    <meta name="description" content="DailyFlash - Latest sports news and updates.">
-    <title>DailyFlash | Sports</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8" />
+  <meta name="author" content="Your Name" />
+  <meta name="description" content="DailyFlash - Breaking news and trending stories from around the world." />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>DailyFlash | Sports</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
-<body>
-    <!-- Header Section -->
-    <header>
-        <div class="container">
-            <div class="header-content">
-                <div class="logo">DF</div>
-                <div class="site-title">
-                    <h1>DailyFlash</h1>
-                    <p class="tagline">Your Source for Instant News</p>
-                </div>
-            </div>
-        </div>
-    </header>
 
-    <!-- Navigation Bar -->
-    <nav>
-        <div class="container">
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="world.html">World</a></li>
-                <li><a href="sports.html" class="current">Sports</a></li>
-                <li><a href="#">Tech</a></li>
-                <li><a href="#">Lifestyle</a></li>
-                <li><a href="#">Contact</a></li>
-            </ul>
-        </div>
+<body id="top">
+  <a class="skip-link" href="#content">Skip to content</a>
+
+  <header class="container">
+    <div class="brand">
+      <div class="logo" aria-hidden="true"></div>
+      <div>
+        <h1>DailyFlash</h1>
+        <p class="tagline">Your Source for Instant News</p>
+      </div>
+    </div>
+
+    <nav aria-label="Primary">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="world.html">World</a></li>
+        <li><a class="active" href="sports.html">Sports</a></li>
+        <li><a href="tech.html">Tech</a></li>
+        <li><a href="lifestyle.html">Lifestyle</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
     </nav>
+  </header>
 
-    <!-- Main Content -->
-    <main class="container">
-        <div class="main-content">
-            <!-- Articles Section -->
-            <section class="articles">
-                <article>
-                    <h2>Olympic Committee Announces Host City for 2032 Games</h2>
-                    <span class="pub-date">Published: March 13, 2025</span>
-                    <img src="https://placehold.co/800x400/2d3748/white?text=Olympic+Host" alt="Olympic rings" class="article-thumbnail">
-                    <p>The International Olympic Committee has selected Brisbane, Australia as the host city for the 2032 Summer Olympics. The decision follows an extensive evaluation process and promises to deliver a sustainable and innovative games.</p>
-                    <p>Australian officials have outlined plans for utilizing existing infrastructure and implementing new green technologies. The games are expected to boost tourism and create thousands of jobs in the region.</p>
-                    <a href="#" class="read-more">Read More</a>
-                </article>
+  <main class="container" id="content">
+    <div class="grid">
+      <section class="card articles" aria-label="Sports news">
+        <p class="section-title">Sports News</p>
 
-                <hr>
+        <article>
+          <h2>National Team Wins Championship</h2>
+          <div class="meta">
+            <time datetime="2025-11-28">Nov 28, 2025</time>
+            <small>By Sports Desk</small>
+          </div>
+          <img class="thumb" src="https://images.unsplash.com/photo-1517649763962-0c623066013b?auto=format&fit=crop&w=1200&q=70"
+               alt="Team celebrating with fans in a packed stadium" />
+          <p class="summary">
+            The final delivered drama, momentum swings, and a late winner that sealed the championship.
+            Coaches praised the team’s composure under pressure and the tactical adjustments made at halftime.
+            Officials confirmed a victory parade schedule, and fans are expected to gather across major city centers.
+          </p>
+          <a class="readmore" href="index.html">Back to Home</a>
+        </article>
 
-                <article>
-                    <h2>Basketball Star Signs Record-Breaking Contract Extension</h2>
-                    <span class="pub-date">Published: March 11, 2025</span>
-                    <img src="https://placehold.co/800x400/1a365d/white?text=Record+Contract" alt="Basketball player" class="article-thumbnail">
-                    <p>In a landmark deal for professional sports, reigning MVP Elena Rodriguez has signed a five-year contract extension worth $320 million with her current team. The agreement makes her the highest-paid athlete in the history of women's professional sports.</p>
-                    <p>The contract includes performance incentives and marketing provisions that could increase its total value. Team executives praised Rodriguez's leadership and expressed confidence in her ability to lead the franchise to multiple championships.</p>
-                    <a href="#" class="read-more">Read More</a>
-                </article>
+        <hr />
 
-                <hr>
+        <article>
+          <h2>Star Striker Returns Ahead of Key Qualifier</h2>
+          <div class="meta">
+            <time datetime="2025-11-24">Nov 24, 2025</time>
+            <small>Category: Football</small>
+          </div>
+          <img class="thumb" src="https://images.unsplash.com/photo-1521412644187-c49fa049e84d?auto=format&fit=crop&w=1200&q=70"
+               alt="Football player controlling the ball during a match" />
+          <p class="summary">
+            After a brief injury spell, the striker rejoined full training and is expected to feature in the upcoming qualifier.
+            The coaching staff emphasized cautious fitness management while preparing set-piece drills and pressing routines.
+            Analysts say the team’s attacking rhythm improves significantly when the striker starts.
+          </p>
+        </article>
 
-                <article>
-                    <h2>New Safety Protocols Implemented in Professional Football</h2>
-                    <span class="pub-date">Published: March 9, 2025</span>
-                    <img src="https://placehold.co/800x400/3182ce/white?text=Football+Safety" alt="Football players" class="article-thumbnail">
-                    <p>Major football leagues worldwide have announced comprehensive new safety protocols aimed at reducing head injuries and improving player welfare. The measures include enhanced concussion protocols, modified tackling techniques, and advanced helmet technology.</p>
-                    <p>Medical experts and former players collaborated on developing the new standards, which will be implemented starting next season. The changes come after years of research into the long-term effects of repetitive head trauma in contact sports.</p>
-                    <a href="#" class="read-more">Read More</a>
-                </article>
-            </section>
+        <hr />
 
-            <!-- Sidebar Section -->
-            <aside class="sidebar">
-                <div class="sidebar-section">
-                    <h3>Sports Headlines</h3>
-                    <ul>
-                        <li><a href="#">Tennis Grand Slam Tournament Upsets Shake Rankings</a></li>
-                        <li><a href="#">Formula One Season Opens With Surprising Results</a></li>
-                        <li><a href="#">College Basketball Championship Approaches Final Four</a></li>
-                        <li><a href="#">Golf's Youngest Pro Wins Maiden Tournament</a></li>
-                        <li><a href="#">Swimming World Records Broken at International Meet</a></li>
-                    </ul>
-                </div>
+        <article>
+          <h2>Champions’ Parade Set for This Weekend</h2>
+          <div class="meta">
+            <time datetime="2025-11-23">Nov 23, 2025</time>
+            <small>Category: Community</small>
+          </div>
+          <img class="thumb" src="https://images.unsplash.com/photo-1547347298-4074fc3086f0?auto=format&fit=crop&w=1200&q=70"
+               alt="Crowd celebrating at a sports parade" />
+          <p class="summary">
+            City authorities announced traffic advisories for the weekend as fans plan to celebrate the championship victory.
+            Organizers requested attendees follow safety instructions, use public transport where possible, and stay hydrated.
+            The squad will appear on a stage for brief speeches and a trophy lift.
+          </p>
+        </article>
+      </section>
 
-                <div class="sidebar-section">
-                    <h3>Editor's Pick</h3>
-                    <div class="trending-item">
-                        <a href="#">The Rise of Women's Professional Sports</a>
-                    </div>
-                    <div class="trending-item">
-                        <a href="#">How Technology Is Changing Sports Training</a>
-                    </div>
-                </div>
+      <aside class="card" aria-label="Top headlines sidebar">
+        <h3>Top Headlines</h3>
+        <ul class="headlines">
+          <li><a href="sports.html">Coach reveals training focus before qualifier</a></li>
+          <li><a href="sports.html">Injury update: key midfielder nearing return</a></li>
+          <li><a href="world.html">International summit continues with new proposals</a></li>
+          <li><a href="tech.html">Smartphone maker announces record shipments</a></li>
+          <li><a href="lifestyle.html">Weekend wellness: quick habits that stick</a></li>
+        </ul>
 
-                <div class="sidebar-section">
-                    <div class="ad-box">
-                        <h4>Sports Gear Sale</h4>
-                        <p>Upgrade your equipment with our exclusive sports gear discounts.</p>
-                        <a href="#" class="cta-button">Shop Now</a>
-                    </div>
-                </div>
-            </aside>
+        <div class="pill">Editor’s Pick</div>
+        <ul class="picks">
+          <li><a href="sports.html">How the champions changed tactics mid-game</a></li>
+          <li><a href="sports.html">Three young players to watch this season</a></li>
+        </ul>
+
+        <div class="ad" role="note" aria-label="Advertisement">
+          <strong>Advertisement</strong>
+          <p>
+            Sports brands: promote your gear on matchday.
+            <a href="contact.html">Advertise now</a>.
+          </p>
         </div>
+      </aside>
+    </div>
 
-        <a href="#" class="back-to-top">Back to Top</a>
-    </main>
+    <a class="back-top" href="#top">↑ Back to Top</a>
+  </main>
 
-    <!-- Footer Section -->
-    <footer>
-        <div class="container">
-            <div class="footer-content">
-                <div class="copyright">© 2025 DailyFlash</div>
-                <div class="social-links">
-                    <a href="#">Facebook</a>
-                    <a href="#">X (Twitter)</a>
-                    <a href="#">Instagram</a>
-                    <a href="#">LinkedIn</a>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>All Rights Reserved.</p>
-            </div>
-        </div>
-    </footer>
+  <footer class="container">
+    <div class="footer-row">
+      <div>© 2025 DailyFlash</div>
+      <div class="social" aria-label="Social links">
+        <a href="#" aria-label="Facebook">Facebook</a>
+        <a href="#" aria-label="X">X (Twitter)</a>
+        <a href="#" aria-label="Instagram">Instagram</a>
+        <a href="#" aria-label="LinkedIn">LinkedIn</a>
+      </div>
+      <div>Credits: DailyFlash Media</div>
+    </div>
+    <div class="note">All Rights Reserved.</div>
+  </footer>
 </body>
 </html>
